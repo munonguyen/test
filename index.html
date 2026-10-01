@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>AWS SAA-C03 VPC Practice</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>AWS SAA-C03 — VPC Practice</h1>
+      <div class="sub">60 câu VPC • Submit từng câu • Giải thích ngay • Lưu tiến độ trên thiết bị</div>
+    </div>
+    <div class="toolbar">
+      <select id="cat"><option value="ALL">Tất cả chủ đề</option></select>
+      <select id="level"><option value="ALL">Tất cả độ khó</option></select>
+      <select id="status">
+        <option value="ALL">Tất cả trạng thái</option>
+        <option value="UNANSWERED">Chưa làm</option>
+        <option value="WRONG">Đã làm sai</option>
+        <option value="CORRECT">Đã làm đúng</option>
+      </select>
+      <button class="btn secondary" id="shuffle">Trộn câu</button>
+    </div>
+  </header>
+
+  <section class="stats">
+    <div class="stat"><b id="shown">0</b><span>Trong bộ lọc</span></div>
+    <div class="stat"><b id="done">0</b><span>Đã submit</span></div>
+    <div class="stat"><b id="correct">0</b><span>Đúng</span></div>
+    <div class="stat"><b id="score">0%</b><span>Điểm</span></div>
+  </section>
+  <div class="progress"><div id="bar"></div></div>
+
+  <main class="card">
+    <div class="qnum" id="qnum"></div>
+    <div class="meta"><span class="badge" id="qcat"></span><span class="badge" id="qlevel"></span></div>
+    <div class="question" id="question"></div>
+    <div class="notice" id="notice"></div>
+    <div id="options"></div>
+    <div class="explanation" id="exp"></div>
+
+    <div class="actions">
+      <div class="left">
+        <button class="btn secondary" id="prev">← Trước</button>
+        <button class="btn secondary" id="next">Sau →</button>
+      </div>
+      <div class="right">
+        <button class="btn secondary" id="resetOne">Làm lại câu</button>
+        <button class="btn" id="submit">Submit câu này</button>
+      </div>
+    </div>
+  </main>
+
+  <section class="review">
+    <button class="btn secondary" id="resetAll">Xóa toàn bộ tiến độ</button>
+    <div class="footer-note">
+      Câu hỏi được viết mới theo các chủ đề VPC thường xuất hiện trong SAA-C03: CIDR/subnet, routing, IGW/NAT, Security Group/NACL, VPC Endpoints/PrivateLink, Peering/Transit Gateway, VPN/Direct Connect và Flow Logs. Không sao chép nguyên văn ngân hàng câu hỏi thương mại.
+    </div>
+  </section>
+</div>
+
+<script>window.ALL_QUESTIONS=[];</script>
+<script src="questions-1.js"></script>
+<script src="questions-2.js"></script>
+<script src="questions-3.js"></script>
+<script src="questions-4.js"></script>
+<script src="questions-5.js"></script>
+<script src="questions-6.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
