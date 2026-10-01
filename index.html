@@ -1,37 +1,37 @@
 <!doctype html>
-<html lang="vi">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#f5f7fb">
-  <title>AWS SAA-C03 VPC Practice</title>
+  <title>AWS SAA-C03 VPC Scenario Exam</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="app">
   <header>
     <div>
-      <h1>AWS SAA-C03 — VPC Practice</h1>
-      <div class="sub">60 câu VPC • Submit từng câu • Giải thích ngay • Lưu tiến độ trên thiết bị</div>
+      <h1>AWS SAA-C03 — VPC Scenario Exam</h1>
+      <div class="sub">60 realistic scenario questions • Submit each question • Immediate explanation • Progress saved on this device</div>
     </div>
     <div class="toolbar">
-      <select id="cat"><option value="ALL">Tất cả chủ đề</option></select>
-      <select id="level"><option value="ALL">Tất cả độ khó</option></select>
+      <select id="cat"><option value="ALL">All topics</option></select>
+      <select id="level"><option value="ALL">All difficulty levels</option></select>
       <select id="status">
-        <option value="ALL">Tất cả trạng thái</option>
-        <option value="UNANSWERED">Chưa làm</option>
-        <option value="WRONG">Đã làm sai</option>
-        <option value="CORRECT">Đã làm đúng</option>
+        <option value="ALL">All questions</option>
+        <option value="UNANSWERED">Unanswered</option>
+        <option value="WRONG">Incorrect</option>
+        <option value="CORRECT">Correct</option>
       </select>
-      <button class="btn secondary" id="shuffle">Trộn câu</button>
+      <button class="btn secondary" id="shuffle">Shuffle</button>
     </div>
   </header>
 
   <section class="stats">
-    <div class="stat"><b id="shown">0</b><span>Trong bộ lọc</span></div>
-    <div class="stat"><b id="done">0</b><span>Đã submit</span></div>
-    <div class="stat"><b id="correct">0</b><span>Đúng</span></div>
-    <div class="stat"><b id="score">0%</b><span>Điểm</span></div>
+    <div class="stat"><b id="shown">0</b><span>In current set</span></div>
+    <div class="stat"><b id="done">0</b><span>Submitted</span></div>
+    <div class="stat"><b id="correct">0</b><span>Correct</span></div>
+    <div class="stat"><b id="score">0%</b><span>Score</span></div>
   </section>
   <div class="progress"><div id="bar"></div></div>
 
@@ -45,20 +45,20 @@
 
     <div class="actions">
       <div class="left">
-        <button class="btn secondary" id="prev">← Trước</button>
-        <button class="btn secondary" id="next">Sau →</button>
+        <button class="btn secondary" id="prev">← Previous</button>
+        <button class="btn secondary" id="next">Next →</button>
       </div>
       <div class="right">
-        <button class="btn secondary" id="resetOne">Làm lại câu</button>
-        <button class="btn" id="submit">Submit câu này</button>
+        <button class="btn secondary" id="resetOne">Retry question</button>
+        <button class="btn" id="submit">Submit this question</button>
       </div>
     </div>
   </main>
 
   <section class="review">
-    <button class="btn secondary" id="resetAll">Xóa toàn bộ tiến độ</button>
+    <button class="btn secondary" id="resetAll">Reset all progress</button>
     <div class="footer-note">
-      Câu hỏi được viết mới theo các chủ đề VPC thường xuất hiện trong SAA-C03: CIDR/subnet, routing, IGW/NAT, Security Group/NACL, VPC Endpoints/PrivateLink, Peering/Transit Gateway, VPN/Direct Connect và Flow Logs. Không sao chép nguyên văn ngân hàng câu hỏi thương mại.
+      These are original practice questions modeled on recurring SAA-C03 VPC scenario patterns such as NAT/IGW routing, Security Groups vs NACLs, VPC Flow Logs, VPC Endpoints/PrivateLink, VPC Peering/Transit Gateway, Direct Connect/VPN, hybrid DNS, and centralized inspection. They are not copied verbatim from commercial question banks.
     </div>
   </section>
 </div>
