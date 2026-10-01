@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const STORAGE_KEY='aws_saa_vpc_scenario_quiz_v3';
+  const STORAGE_KEY='aws_saa_vpc_uploaded_source_quiz_v4';
   const allQuestions=Array.isArray(window.ALL_QUESTIONS)?window.ALL_QUESTIONS:[];
   let pool=[...allQuestions], idx=0;
   const state=new Map();
@@ -53,7 +53,7 @@
   function submit(){if(!pool.length)return;const q=pool[idx],sel=selected();if(!sel.length){alert('Select an answer before submitting.');return;}if(q.multi&&sel.length!==q.ans.length){alert(`This question requires exactly ${q.ans.length} answers.`);return;}state.set(q.id,{selected:sel,submitted:true,correct:sameSet(sel,q.ans)});save();render();}
   function resetOne(){if(!pool.length)return;state.delete(pool[idx].id);save();applyFilter();}
   function shuffle(){for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]];}idx=0;render();}
-  function resetAll(){if(!confirm('Reset progress for all 60 questions on this device?'))return;state.clear();save();applyFilter();}
+  function resetAll(){if(!confirm(`Reset progress for all ${allQuestions.length} questions on this device?`))return;state.clear();save();applyFilter();}
 
   els.cat.addEventListener('change',applyFilter);els.level.addEventListener('change',applyFilter);els.status.addEventListener('change',applyFilter);
   els.submit.addEventListener('click',submit);els.resetOne.addEventListener('click',resetOne);els.resetAll.addEventListener('click',resetAll);els.shuffle.addEventListener('click',shuffle);
